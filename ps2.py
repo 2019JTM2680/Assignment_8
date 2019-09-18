@@ -28,6 +28,44 @@ board()
 prCyan("Let's begin the Game!!!" .center(columns))
 index = [" "," "," "," "," "," "," "," "," "]
 board()
+while True:
+	print ("Player A, Enter your number and positon")
+	num1 = int(input("Number : "))
+	pos1 = int(input("Position : "))
+	if num1%2 != 0:
+		index[pos1-1] = num1
+		break
+	else:
+		print ("Invalid input for Player A. Please enter an odd number\n")
+board()
+while True:
+	print ("Player B, Enter your number and positon")
+	num2 = int(input("Number : "))
+	pos2 = int(input("Position : "))
+	if num2 != num1 and pos2 != pos1:
+		if num2%2 == 0:
+			index[pos2-1] = num2
+			break
+		else:
+			print ("Invalid input for Player B. Please enter an even number\n")
+	else:
+		print ("Invalid input. Already occupied postion. Enter a valid input\n")
+board()
+while True:
+	print ("Player A, Enter your number and positon")
+	num3 = int(input("Number : "))
+	pos3 = int(input("Position : "))
+	if num3 != num1 and num3 != num2 and pos3 != pos1 and pos3 != pos2:
+		if num3%2 != 0:
+			index[pos3-1] = num3
+			break
+		else:
+			print ("Invalid input for Player A. Please enter an odd number\n")
+	else:
+		print ("Invalid input. Already occupied postion. Enter a valid input\n")
+board()	
+	
+
 
 
 
