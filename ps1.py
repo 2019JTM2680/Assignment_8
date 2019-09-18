@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #Reading the number
 bin = int(input("Enter the binary number to br encoded:	"))
 print (bin)
@@ -10,4 +10,9 @@ count=0
 for i in digits:
 	if i==1:
 		count+=1
-print (count) 
+print (count)
+if (count%2)==0:
+	digits.append(int(1))
+else:
+	digits.append(int(0))
+print (digits)		 
